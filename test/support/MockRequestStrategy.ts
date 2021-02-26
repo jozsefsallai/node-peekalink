@@ -9,7 +9,7 @@ class MockRequestStrategy extends RequestStrategy {
   }
 
   private async request<T>(method: string, url: string, opts?: object, body?: object): Promise<APIResponse<T>> {
-    if (body && (body as any).url === 'http://bad.url') {
+    if (body && (body as any).link === 'http://bad.url') {
       return Promise.resolve(new APIResponse(false, 404));
     }
 
