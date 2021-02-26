@@ -1,0 +1,31 @@
+{
+  "extends": "standard",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin"
+  ],
+  "rules": {
+    "comma-dangle": [ "error", "never" ],
+
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never"
+      }
+    ],
+
+    "semi": "off",
+    "@typescript-eslint/semi": [ "error" ],
+
+    "prefer-promise-reject-errors": [ "off" ],
+    "array-bracket-spacing": [ "off" ],
+
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [ "error" ]
+  }
+}

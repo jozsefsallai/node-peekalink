@@ -1,0 +1,59 @@
+{
+  "name": "peekalink",
+  "version": "1.0.0",
+  "description": "Peekalink.io API wrapper for Node.js",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankida/node-peekalink.git"
+  },
+  "keywords": [
+    "peekalink",
+    "link",
+    "previews",
+    "api",
+    "client"
+  ],
+  "author": "József Sallai @jozsefsallai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ankida/node-peekalink/issues"
+  },
+  "homepage": "https://github.com/ankida/node-peekalink#readme",
+  "files": [
+    "/lib"
+  ],
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/chai-as-promised": "^7.1.3",
+    "@types/mocha": "^8.2.1",
+    "@types/node": "^14.14.31",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "chai": "^4.3.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^7.20.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "mocha": "^8.3.0",
+    "nock": "^13.0.8",
+    "nyc": "^15.1.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "docs": "typedoc",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "npm run lint -- --fix",
+    "prepack": "npm run build",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "test:cover": "nyc --reporter=lcov --reporter=text npm run test",
+    "watch": "npm run build -- --watch"
+  }
+}
