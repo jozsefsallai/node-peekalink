@@ -2,6 +2,10 @@ import { AvailabilityAPI } from './api/availability';
 import { PreviewAPI } from './api/preview';
 
 import { RequestStrategy, RequestStrategyType } from './utils/requestStrategies';
+import { APIResponse } from './utils/APIResponse';
+import { APIError, LinkPreviewError } from './utils/errors/APIError';
+import { ContentType } from './typings/preview';
+import { LinkDetailType } from './typings/details';
 
 import { LinkAvailability } from './typings/availability';
 import { LinkPreview } from './typings/preview';
@@ -74,5 +78,10 @@ class Client {
 
 export {
   Client,
-  RequestStrategy
+  RequestStrategy,
+  APIResponse,
+  APIError,
+  LinkPreviewError,
+  ContentType,
+  LinkDetailType
 };
