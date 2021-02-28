@@ -4,11 +4,10 @@ import { PreviewAPI } from './api/preview';
 import { RequestStrategy, RequestStrategyType } from './utils/requestStrategies';
 import { APIResponse } from './utils/APIResponse';
 import { APIError, LinkPreviewError } from './utils/errors/APIError';
-import { ContentType } from './typings/preview';
-import { LinkDetailType } from './typings/details';
 
+import { ContentType, LinkPreview } from './typings/preview';
+import { LinkDetailType } from './typings/details';
 import { LinkAvailability } from './typings/availability';
-import { LinkPreview } from './typings/preview';
 
 /**
  * Peekalink API client options
